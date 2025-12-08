@@ -269,7 +269,6 @@ h4.title-decor {
 }
 
 @media (width< 768px) {
-
   .zagolovok {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin: 0.3em 0 0.13em;
@@ -327,11 +326,7 @@ h4.title-decor {
   }
 }
 
-
-
-
 @media (width>= 768px) {
-
   .decorated-zone {
     height: 97.58vh;
   }
@@ -462,7 +457,6 @@ h4.title-decor {
 }
 
 @media (min-width: 1024px) {
-
   .header {
     padding-right: 20px;
     padding-top: 0.8rem;
