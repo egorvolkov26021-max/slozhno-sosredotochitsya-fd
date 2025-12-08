@@ -110,6 +110,9 @@
 }
 
 .header-title {
+  align-self: center;
+  block-size: 117px;
+  inline-size: max(355px, 47vw);
   line-height: 23.4px;
   letter-spacing: 0;
   margin-block-start: 0;
@@ -316,6 +319,7 @@ h4.title-decor {
   }
 
   .podval {
+    block-size: 96vh;
     padding-top: 40px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
@@ -323,15 +327,8 @@ h4.title-decor {
   }
 }
 
-.header-title {
-  block-size: 117px;
-  inline-size: max(355px, 47vw);
-  align-self: center;
-}
 
-.podval {
-  block-size: 96vh;
-}
+
 
 @media (width>= 768px) {
 
@@ -363,6 +360,8 @@ h4.title-decor {
     display: grid;
     padding-top: 65px;
     gap: 5em;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
   }
 
   .block:nth-child(2n + 1) {
@@ -430,11 +429,6 @@ h4.title-decor {
     grid-row: 3;
   }
 
-  .osnova {
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
-  }
-
   .select-text {
     gap: 20px;
   }
@@ -474,10 +468,6 @@ h4.title-decor {
     padding-top: 0.8rem;
   }
 
-  .decor {
-    padding-top: 0.5rem;
-  }
-
   .pystota {
     padding: 0 55px 0 0;
   }
@@ -495,6 +485,7 @@ h4.title-decor {
   .decor {
     align-self: flex-start;
     margin-bottom: 0;
+    padding-top: 0.5rem;
   }
 
   .header__theme-menu {
