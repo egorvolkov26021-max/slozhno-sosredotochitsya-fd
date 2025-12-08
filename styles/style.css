@@ -6,12 +6,15 @@
   margin: 0;
   background-attachment: fixed;
 }
+
 header{
-  block-size: 100vh;
+  height: 100vh;
 }
+
 footer{
-  block-size: 100vh;
+  height: 100vh;
 }
+
 .header {
   display: grid;
   min-height: 668px;
