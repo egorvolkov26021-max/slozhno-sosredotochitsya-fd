@@ -21,16 +21,16 @@
 @media (prefers-color-scheme: light) {
 
   :root {
-    --background-image: url(../images/cover-image-light.png);
-    --background-fon: #f1b2ce;
-    --focus-color: #353430;
-    --hover-color: #32312d66;
-    --color-rec: #f1b2ce;
-    --color-ramka: #353430;
-    --background-text: #ff8dcb;
-    --text-color-header: #353430;
-    --accent-color: #ff8dcb;
-    --text-header: #ffc2e6;
-    --text-main: #f1b2ce;
+     --background-image: url(../images/cover-image-light.png);
+  --background-fon: #fff1f7;
+  --focus-color: #353430;
+  --hover-color: #32312d66;
+  --color-rec: #fff1f7;
+  --color-ramka: #353430;
+  --background-text: #ff8dcb;
+  --text-color-header: #353430;
+  --accent-color: #ff8dcb;
+  --text-header: #ffc2e6;
+  --text-main: #353430;
   }
 }
