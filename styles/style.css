@@ -7,16 +7,9 @@
   background-attachment: fixed;
 }
 
-header {
-  height: 100vh;
-}
-
-footer {
-  height: 100vh;
-}
-
 .header {
   display: grid;
+  block-size: 100vh;
   min-height: 668px;
   font-family: 'IBM Plex mono';
   background-image: var(--background-image);
@@ -136,7 +129,7 @@ footer {
   justify-content: end;
   border-bottom: 1px solid var(--color-ramka);
   border-left: 1px solid var(--color-ramka);
-  margin-top: 0;
+  margin: 0;
 }
 
 .title-decor {
@@ -150,7 +143,7 @@ footer {
 }
 
 .zagolovok {
-  /*смартфон*/
+  margin-block: 0;
   text-shadow: 4px 4px 0 var(--accent-color);
   color: var(--text-header);
   line-height: 83%;
@@ -214,6 +207,7 @@ h4.title-decor {
 
 .podval {
   background-color: var(--background-fon);
+  block-size: 100vh;
 }
 
 .footer-text {
@@ -250,6 +244,8 @@ h4.title-decor {
 .footer {
   align-self: center;
   justify-self: center;
+  margin: 0;
+  margin-block: 0;
 }
 
 .link {
