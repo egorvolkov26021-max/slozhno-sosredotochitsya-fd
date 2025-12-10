@@ -3,12 +3,10 @@
 @import url(variables.css);
 
 .page {
-  margin: 0;
   background-attachment: fixed;
 }
 
 .header {
-  display: grid;
   block-size: 100vh;
   min-height: 668px;
   font-family: 'IBM Plex mono';
@@ -182,6 +180,7 @@
 
 .gallery {
   display: grid;
+  padding-block-end: 10px;
 }
 
 .gallery__item {
@@ -199,9 +198,8 @@ h4.title-decor {
   line-height: 23.4px;
   letter-spacing: 0;
   color: var(--text-main);
-
   margin: 0;
-  margin-block-start: 0.8em;
+  margin-block-start: 0.78em;
   margin-block-end: 0;
 }
 
@@ -272,7 +270,7 @@ h4.title-decor {
   display: grid;
 }
 
-@media (width< 768px) {
+@media (width<768px) {
 
   .decor{
     padding-top: 10px;
@@ -283,15 +281,14 @@ h4.title-decor {
   }
 
   .header > .zagolovok{
-    padding-block-start: 45px;
+    padding-block-start: 60px;
   }
-
   .background-text{
-    margin-block-start: 10px;
+    padding-block-start: 59px;
   }
 
   .ramka {
-    margin-block-end: 10px;
+    margin-block-start: 29px;
   }
 
   .osnova {
@@ -328,12 +325,12 @@ h4.title-decor {
 
   .gallery {
     gap: 10px;
+    padding-block-end: 50px;
   }
 
   .gallery__image {
-    overflow: visible;
     inline-size: 100%;
-    padding-block-end: 35px;
+    overflow: visible;
   }
 
   .header {
@@ -414,9 +411,10 @@ h4.title-decor {
 
   .gallery {
     display: grid;
-    
-    grid-template-rows: 19vh 22vh 1fr;
+    grid-template-columns: repeat(3, clamp(230px, 30vh, 315px));
+    grid-template-rows: repeat(3, clamp(230px, 30vh, 315px));
     gap: 20px;
+    height: 100vw;
     box-sizing: border-box;
     grid-auto-flow: dense;
   }
@@ -429,9 +427,8 @@ h4.title-decor {
   .gallery__image {
     inline-size: 100%;
     block-size: 100%;
+    max-block-size: 100%;
     object-fit: cover;
-    inline-size: 100%;
-    padding-block-end: 80px;
   }
 
   .gallery__item:nth-child(1) {
@@ -480,13 +477,16 @@ h4.title-decor {
     padding-inline-end: 20px;
   }
 
-  .footer-text::after{
-    margin-block-end: 43px;
+  .footer-text{
+    margin-top: 85px;
+    padding-bottom: 20px;
+  }
+
+  .footer-text::before{
+    margin-block-start: 10px;
   }
 
   .footer {
-    padding-block-start: 0px;
-    padding-block-end: 10px;
     margin-left: 0;
     justify-self: center;
     align-self: center;
@@ -496,7 +496,7 @@ h4.title-decor {
 @media (min-width: 1024px) {
 
   .header {
-    padding-inline-end: 20px;
+    padding-right: 20px;
   }
 
   .decor{
@@ -510,11 +510,6 @@ h4.title-decor {
   .verh-header {
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding-block-start: 1rem;
-  }
-
-  .ramka{
-    margin-block-end: 12px;
   }
 
   .header__theme-menu-list {
@@ -525,7 +520,7 @@ h4.title-decor {
   .decor {
     align-self: flex-start;
     margin-bottom: 0;
-    padding: 0;
+    padding-top: 0.5rem;
   }
 
   .header__theme-menu {
@@ -534,20 +529,16 @@ h4.title-decor {
   }
 
   .zagolovok {
-    padding-block-start: 200px;
+    padding-top: 180px;
   }
 
   .background-text {
-    padding-block-start: 95px;
+    padding-top: 90px;
   }
 
   .header-title {
     block-size: min(15vh, 71px);
     inline-size: max(491px, 45vw);
-  }
-
-  .block:first-child{
-    padding-block-start: 10px;
   }
 
   .block:nth-child(2n) {
@@ -561,7 +552,10 @@ h4.title-decor {
 
   .gallery {
     padding-top: 20px;
+    grid-template-columns: none;
     grid-template-rows: none;
+    gap: 25px;
+    height: auto;
   }
 
   .title-decor {
@@ -570,13 +564,12 @@ h4.title-decor {
 
   .section-image {
     display: block;
-    height: 110%;
     gap: 0;
-    padding-block-end: 65px;
   }
 
   .podval {
     padding-inline-end: 20px;
+    padding-top: 65px;
   }
 
   .footer {
@@ -585,12 +578,7 @@ h4.title-decor {
     align-self: center;
   }
 
-  .footer-text{
-    margin-block: 0;
-  }
-
   .footer-text::after {
-    margin-block-end: 40px;
+    margin-block-end: 10px;
   }
-
 }
