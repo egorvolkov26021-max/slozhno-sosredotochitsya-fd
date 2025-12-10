@@ -274,8 +274,24 @@ h4.title-decor {
 
 @media (width< 768px) {
 
+  .decor{
+    padding-top: 10px;
+  }
+
   .zagolovok {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header > .zagolovok{
+    padding-block-start: 45px;
+  }
+
+  .background-text{
+    margin-block-start: 10px;
+  }
+
+  .ramka {
+    margin-block-end: 10px;
   }
 
   .osnova {
@@ -283,6 +299,10 @@ h4.title-decor {
     gap: 20px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+  }
+
+  .block:first-child > .title-main{
+    padding-block-start: 40px;
   }
 
   .title-main:first-child {
@@ -318,14 +338,16 @@ h4.title-decor {
   .header {
     padding-inline-start: 10px;
     padding-inline-end: 10px;
-    padding-top: 10px;
   }
 
   .podval {
-    padding-top: 40px;
+    margin-block-start: 35px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
-    padding-bottom: 10px;
+  }
+  
+  .footer-text::after {
+    margin-block-end: 20px;
   }
 }
 
@@ -350,8 +372,9 @@ h4.title-decor {
 
   .zagolovok {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    justify-self: start;
     align-self: center;
+    margin-inline-start: -20px;
+    padding-block-start: 25px;
   }
 
   .osnova {
@@ -360,6 +383,10 @@ h4.title-decor {
     gap: 5em;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
+  }
+
+  .block:first-child{
+    padding-block-start: 20px;
   }
 
   .block:nth-child(2n + 1) {
@@ -387,10 +414,9 @@ h4.title-decor {
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 29.5vw);
+    
     grid-template-rows: 19vh 22vh 1fr;
     gap: 20px;
-    height: 100vw;
     box-sizing: border-box;
     grid-auto-flow: dense;
   }
@@ -441,18 +467,29 @@ h4.title-decor {
 
   .header {
     padding-inline-start: 20px;
-    padding-inline-end: 28px;
+    padding-inline-end: 20px;
+  }
+
+  .decor{
     padding-top: 20px;
   }
 
   .podval {
-    margin-top: 85px;
     padding-inline-start: 20px;
-    padding-inline-end: 28px;
-    padding-bottom: 20px;
+    padding-inline-end: 20px;
+  }
+
+  .footer-text{
+    margin-top: 80px;
+  }
+
+  .footer-text::after{
+    margin-block-end: 43px;
   }
 
   .footer {
+    padding-block-start: 0px;
+    padding-block-end: 10px;
     margin-left: 0;
     justify-self: center;
     align-self: center;
@@ -462,8 +499,11 @@ h4.title-decor {
 @media (min-width: 1024px) {
 
   .header {
-    padding-right: 20px;
-    padding-top: 0.8rem;
+    padding-inline-end: 20px;
+  }
+
+  .decor{
+    padding-block-start: 0.8rem;
   }
 
   .pystota {
@@ -473,6 +513,10 @@ h4.title-decor {
   .verh-header {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+
+  .ramka{
+    margin-block-end: 1rem;
   }
 
   .header__theme-menu-list {
@@ -492,16 +536,19 @@ h4.title-decor {
   }
 
   .zagolovok {
-    padding-top: 180px;
+    padding-block-start: 200px;
   }
 
   .background-text {
-    padding-top: 90px;
+    padding-block-start: 95px;
   }
 
   .header-title {
     block-size: min(15vh, 71px);
     inline-size: max(491px, 45vw);
+  }
+  .block:first-child{
+    padding-block-start: 0px;
   }
 
   .block:nth-child(2n) {
@@ -515,10 +562,7 @@ h4.title-decor {
 
   .gallery {
     padding-top: 20px;
-    grid-template-columns: none;
     grid-template-rows: none;
-    gap: 25px;
-    height: auto;
   }
 
   .title-decor {
@@ -529,12 +573,11 @@ h4.title-decor {
     display: block;
     height: 110%;
     gap: 0;
+    padding-block-end: 65px;
   }
 
   .podval {
     padding-inline-end: 20px;
-    padding-top: 65px;
-    margin: 0;
   }
 
   .footer {
@@ -543,7 +586,12 @@ h4.title-decor {
     align-self: center;
   }
 
-  .footer-text::after {
-    margin-block-end: 10px;
+  .footer-text{
+    margin-block: 0;
   }
+
+  .footer-text::after {
+    margin-block-end: 40px;
+  }
+
 }
