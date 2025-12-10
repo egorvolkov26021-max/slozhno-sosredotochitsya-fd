@@ -331,8 +331,9 @@ h4.title-decor {
   }
 
   .gallery__image {
-    inline-size: 100%;
     overflow: visible;
+    inline-size: 100%;
+    padding-block-end: 35px;
   }
 
   .header {
@@ -341,7 +342,6 @@ h4.title-decor {
   }
 
   .podval {
-    margin-block-start: 35px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
@@ -429,8 +429,9 @@ h4.title-decor {
   .gallery__image {
     inline-size: 100%;
     block-size: 100%;
-    max-block-size: 100%;
     object-fit: cover;
+    inline-size: 100%;
+    padding-block-end: 80px;
   }
 
   .gallery__item:nth-child(1) {
@@ -479,10 +480,6 @@ h4.title-decor {
     padding-inline-end: 20px;
   }
 
-  .footer-text{
-    margin-top: 80px;
-  }
-
   .footer-text::after{
     margin-block-end: 43px;
   }
@@ -513,10 +510,11 @@ h4.title-decor {
   .verh-header {
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding-block-start: 1rem;
   }
 
   .ramka{
-    margin-block-end: 1rem;
+    margin-block-end: 12px;
   }
 
   .header__theme-menu-list {
@@ -527,7 +525,7 @@ h4.title-decor {
   .decor {
     align-self: flex-start;
     margin-bottom: 0;
-    padding-top: 0.5rem;
+    padding: 0;
   }
 
   .header__theme-menu {
@@ -547,8 +545,9 @@ h4.title-decor {
     block-size: min(15vh, 71px);
     inline-size: max(491px, 45vw);
   }
+
   .block:first-child{
-    padding-block-start: 0px;
+    padding-block-start: 10px;
   }
 
   .block:nth-child(2n) {
