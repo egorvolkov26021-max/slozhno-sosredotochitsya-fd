@@ -325,7 +325,7 @@ h4.title-decor {
 
   .gallery {
     gap: 10px;
-    padding-block-end: 50px;
+    padding-block-end: 40px;
   }
 
   .gallery__image {
@@ -344,7 +344,7 @@ h4.title-decor {
   }
   
   .footer-text::after {
-    margin-block-end: 20px;
+    margin-block-end: 30px;
   }
 }
 
