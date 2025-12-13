@@ -152,7 +152,6 @@
   display: grid;
   height: fit-content;
   font-family: 'IBM Plex mono';
-  gap: 1em;
 }
 
 .title-main {
@@ -180,7 +179,6 @@
 
 .gallery {
   display: grid;
-  padding-block-end: 10px;
 }
 
 .gallery__item {
@@ -198,9 +196,6 @@ h4.title-decor {
   line-height: 23.4px;
   letter-spacing: 0;
   color: var(--text-main);
-  margin: 0;
-  margin-block-start: 0.78em;
-  margin-block-end: 0;
 }
 
 .podval {
@@ -293,9 +288,13 @@ h4.title-decor {
 
   .osnova {
     display: grid;
-    gap: 20px;
+    gap: 25px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+  }
+
+  .text-main{
+    padding-block-start: 10px;
   }
 
   .block:first-child > .title-main{
@@ -303,15 +302,15 @@ h4.title-decor {
   }
 
   .title-main:first-child {
-    padding: 1.6em 0 1em;
+    padding: 1.5em 0 1em;
   }
 
   .title-main:nth-child(2n + 3) {
     padding: 3em 0 0;
   }
 
-  .select-text {
-    gap: 10px;
+  .section-text {
+    gap: 20px;
   }
 
   .text-planshet-par > .title-decor:first-child {
@@ -324,8 +323,8 @@ h4.title-decor {
   }
 
   .gallery {
-    gap: 10px;
-    padding-block-end: 40px;
+    gap: 7px;
+    padding-block-end: 37px;
   }
 
   .gallery__image {
@@ -344,7 +343,11 @@ h4.title-decor {
   }
   
   .footer-text::after {
-    margin-block-end: 30px;
+    margin-block-end: 11px;
+  }
+
+  .footer-text::before {
+    margin-block-start: 11px;
   }
 }
 
