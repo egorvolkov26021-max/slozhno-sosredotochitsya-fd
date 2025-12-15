@@ -352,8 +352,6 @@ h4.title-decor {
 }
 
 @media (width>= 768px) {
-  .background-text {
-  }
 
   .header__theme-menu {
     padding-top: 10.3vh;
@@ -517,9 +515,6 @@ h4.title-decor {
   .zagolovok {
     align-self: center;
     padding-block-start: 25px;
-  }
-
-  .background-text {
   }
 
   .header-title {
