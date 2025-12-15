@@ -7,6 +7,7 @@
 }
 
 .header {
+  display: grid;
   block-size: 100vh;
   min-height: 668px;
   font-family: 'IBM Plex mono';
@@ -83,7 +84,7 @@
   letter-spacing: 0;
   text-align: center;
   margin: 0;
-  margin-bottom: 1.8em;
+  padding-bottom: 1.8em;
 }
 
 .decor::after {
@@ -103,13 +104,16 @@
 }
 
 .background-text {
-  display: flex;
-  align-items: center;
-  justify-content: end;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-self: end;
+  box-sizing: content-box;
+  width: 100%;
 }
 
 .header-title {
-  align-self: center;
+  align-self: flex-start;
+  justify-self: end;
   block-size: 117px;
   inline-size: max(355px, 47vw);
   line-height: 23.4px;
@@ -118,16 +122,15 @@
   margin-block-end: 0;
 }
 
-.ramka {
+.background-text::after {
   content: '';
   display: block;
   width: 25px;
   height: 25px;
-  align-self: end;
-  justify-content: end;
+  justify-self: flex-start;
   border-bottom: 1px solid var(--color-ramka);
   border-left: 1px solid var(--color-ramka);
-  margin: 0;
+  grid-row: 2;
 }
 
 .title-decor {
@@ -165,6 +168,8 @@
 }
 
 .osnova {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   background-color: var(--background-fon);
   font-family: 'IBM Plex mono';
 }
@@ -179,6 +184,7 @@
 
 .gallery {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .gallery__item {
@@ -266,8 +272,7 @@ h4.title-decor {
 }
 
 @media (width<768px) {
-
-  .decor{
+  .decor {
     padding-top: 10px;
   }
 
@@ -275,7 +280,7 @@ h4.title-decor {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  .header > .zagolovok{
+  /*.header > .zagolovok{
     padding-block-start: 60px;
   }
   .background-text{
@@ -284,28 +289,28 @@ h4.title-decor {
 
   .ramka {
     margin-block-start: 29px;
+  }*/
+
+  .header-title {
+    top: 10px;
   }
 
   .osnova {
-    display: grid;
     gap: 25px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+    padding-block-start: 16px;
   }
 
-  .text-main{
+  .text-main {
     padding-block-start: 10px;
   }
 
-  .block:first-child > .title-main{
-    padding-block-start: 40px;
-  }
-
-  .title-main:first-child {
+  .title-main:nth-child(1) {
     padding: 1.5em 0 1em;
   }
 
-  .title-main:nth-child(2n + 3) {
+  .title-main:nth-child(2(n+1) + 3) {
     padding: 3em 0 0;
   }
 
@@ -324,41 +329,30 @@ h4.title-decor {
 
   .gallery {
     gap: 7px;
-    padding-block-end: 37px;
+    padding-block-end: 53px;
   }
 
   .gallery__image {
-    inline-size: 100%;
-    overflow: visible;
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   .header {
+    padding-block-end: 10px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
+    gap: 26px;
   }
 
   .podval {
-    padding-inline-start: 10px;
-    padding-inline-end: 10px;
-  }
-  
-  .footer-text::after {
-    margin-block-end: 11px;
-  }
-
-  .footer-text::before {
-    margin-block-start: 11px;
+    padding-inline: 10px;
+    padding-block: 10px;
   }
 }
 
 @media (width>= 768px) {
-
-  .decorated-zone {
-    height: 97.58vh;
-  }
-
   .background-text {
-    padding-top: 75px;
   }
 
   .header__theme-menu {
@@ -372,20 +366,20 @@ h4.title-decor {
 
   .zagolovok {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    align-self: center;
+  }
+
+  .header > .zagolovok {
     margin-inline-start: -20px;
-    padding-block-start: 25px;
   }
 
   .osnova {
-    display: grid;
-    padding-top: 65px;
+    padding-top: 40px;
     gap: 5em;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
   }
 
-  .block:first-child{
+  .block:first-child {
     padding-block-start: 20px;
   }
 
@@ -414,12 +408,12 @@ h4.title-decor {
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, clamp(230px, 30vh, 315px));
-    grid-template-rows: repeat(3, clamp(230px, 30vh, 315px));
+    grid-template-columns: repeat(3, clamp(230px, 30vw, 315px));
+    grid-template-rows: repeat(2, clamp(230px, 30vw, 315px)), auto;
     gap: 20px;
-    height: 100vw;
-    box-sizing: border-box;
-    grid-auto-flow: dense;
+    height: 100%;
+    width: 100%;
+    padding-block-end: 45px;
   }
 
   .gallery__item {
@@ -431,6 +425,7 @@ h4.title-decor {
     inline-size: 100%;
     block-size: 100%;
     max-block-size: 100%;
+    object-position: center;
     object-fit: cover;
   }
 
@@ -467,43 +462,32 @@ h4.title-decor {
   }
 
   .header {
+    gap: 27px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
+    padding-block-end: 20px;
   }
 
-  .decor{
+  .decor {
     padding-top: 20px;
   }
 
   .podval {
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
-  }
-
-  .footer-text{
-    margin-top: 85px;
-    padding-bottom: 20px;
-  }
-
-  .footer-text::before{
-    margin-block-start: 10px;
+    padding-inline: 20px;
+    padding-block: 20px;
   }
 
   .footer {
-    margin-left: 0;
     justify-self: center;
     align-self: center;
   }
 }
 
 @media (min-width: 1024px) {
-
   .header {
-    padding-right: 20px;
-  }
-
-  .decor{
-    padding-block-start: 0.8rem;
+    padding-inline: 20px;
+    padding-block-start: 12px;
+    gap: 75px;
   }
 
   .pystota {
@@ -522,8 +506,7 @@ h4.title-decor {
 
   .decor {
     align-self: flex-start;
-    margin-bottom: 0;
-    padding-top: 0.5rem;
+    padding-block-start: 0.5rem;
   }
 
   .header__theme-menu {
@@ -532,11 +515,11 @@ h4.title-decor {
   }
 
   .zagolovok {
-    padding-top: 180px;
+    align-self: center;
+    padding-block-start: 25px;
   }
 
   .background-text {
-    padding-top: 90px;
   }
 
   .header-title {
@@ -554,11 +537,12 @@ h4.title-decor {
   }
 
   .gallery {
-    padding-top: 20px;
+    padding-block-start: 20px;
     grid-template-columns: none;
     grid-template-rows: none;
-    gap: 25px;
+    gap: 20px;
     height: auto;
+    padding-block-end: 48px;
   }
 
   .title-decor {
@@ -571,17 +555,13 @@ h4.title-decor {
   }
 
   .podval {
-    padding-inline-end: 20px;
-    padding-top: 65px;
+    padding-inline: 20px;
+    padding-block: 20px;
   }
 
   .footer {
     padding-top: 0;
     margin-top: 0%;
     align-self: center;
-  }
-
-  .footer-text::after {
-    margin-block-end: 10px;
   }
 }
