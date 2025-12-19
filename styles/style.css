@@ -1,5 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.page {
+  background-attachment: fixed;
+}
+
 .header {
   display: grid;
   block-size: 100vh;
@@ -87,11 +91,13 @@
   align-items: center;
   border-top: 1px solid var(--color-decorated-element-header-footer);
   border-right: 1px solid var(--color-decorated-element-header-footer);
-  background: radial-gradient(circle, var(--color-decorated-element-header) 1px, transparent 8px);
+  background: radial-gradient(
+    circle,
+    var(--color-decorated-element-header) 1px,
+    transparent 8px
+  );
   filter: drop-shadow(0 0 1px var(--color-decorated-element-header));
 }
-
-
 
 .header-block-text {
   display: grid;
@@ -260,6 +266,7 @@
 }
 
 @media (width<768px) {
+
   .decorated-element-header-dark {
     padding-top: 10px;
   }
@@ -286,7 +293,6 @@
   .main-title-block {
     padding: 1.5em 0 1em;
   }
-
 
   .section-text {
     gap: 20px;
@@ -376,7 +382,6 @@
     display: block;
   }
 
-
   .gallery {
     padding-block-start: 20px;
     display: grid;
@@ -431,7 +436,7 @@
 
   .section-image {
     display: block;
-    gap:0;
+    gap: 0;
   }
 
   .header {
@@ -452,7 +457,7 @@
 
 @media (min-width: 1024px) {
 
-   .header__theme-menu-list {
+  .header__theme-menu-list {
     display: flex;
     gap: 10px;
   }
@@ -473,7 +478,7 @@
   .header-start-block {
     flex-direction: row-reverse;
     justify-content: space-between;
-  } 
+  }
 
   .block-even > .section-text {
     display: grid;
@@ -499,5 +504,4 @@
     padding-block-start: 25px;
     align-self: center;
   }
-
 }
