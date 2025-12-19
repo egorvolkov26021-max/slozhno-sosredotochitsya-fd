@@ -1,7 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-.page {
-  margin: 0;
-}
+
 .header {
   display: grid;
   block-size: 100vh;
@@ -43,7 +41,7 @@
   font-family: 'IBM Plex Mono', Arial, sans-serif;
 }
 
-.header-start-block{
+.header-start-block {
   display: flex;
   flex-direction: column;
 }
@@ -472,7 +470,7 @@
     padding: 0 60px 0 0;
   }
 
-  .header-start-block{
+  .header-start-block {
     flex-direction: row-reverse;
     justify-content: space-between;
   } 
@@ -480,6 +478,7 @@
   .block-even > .section-text {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-block-start: 8px;
   }
 
   .decorated-element-header-dark {
@@ -501,7 +500,4 @@
     align-self: center;
   }
 
-  .block-even > .section-text {
-    padding-block-start: 8px;
-  }
 }
