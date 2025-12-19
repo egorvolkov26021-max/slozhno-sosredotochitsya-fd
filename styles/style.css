@@ -1,31 +1,27 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
-@import url(variables.css);
-
 .page {
-  background-attachment: fixed;
+  margin: 0;
 }
-
 .header {
   display: grid;
   block-size: 100vh;
   min-height: 668px;
-  font-family: 'IBM Plex mono';
-  background-image: var(--background-image);
+  font-family: 'IBM Plex mono', Arial, sans-serif;
+  background-image: var(--background-header);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .header__theme-menu {
   justify-self: central;
   align-self: flex-end;
-}
-
-.header__theme-menu-list {
-  margin: 0;
-  padding: 0;
+  cursor: pointer;
 }
 
 .header__theme-menu-item {
@@ -40,17 +36,14 @@
   background-color: transparent;
   border: none;
   color: var(--focus-color);
-  font-size: 18px;
-  line-height: 18px;
-  letter-spacing: 0;
   align-items: center;
   width: 70px;
   height: 26px;
   font-weight: 400;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
 }
 
-.verh-header {
+.header-start-block{
   display: flex;
   flex-direction: column;
 }
@@ -65,18 +58,19 @@
   outline: 1px solid var(--hover-color);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--focus-color);
   outline: none;
 }
 
-.decor {
-  font-family: 'IBM Plex mono', Regular;
+.decorated-element-header-dark {
+  font-family: 'IBM Plex mono', Arial, sans-serif;
   margin-block-start: 0;
   display: flex;
+  gap: 3px;
   font-weight: 400;
   text-transform: uppercase;
-  color: var(--color-rec);
+  color: var(--color-decorated-element-header);
   align-self: end;
   align-items: end;
   font-size: 18px;
@@ -87,23 +81,21 @@
   padding-bottom: 1.8em;
 }
 
-.decor::after {
+.decorated-element-header-dark::after {
   content: '';
   display: block;
-  width: 26px;
-  height: 26px;
-  background: radial-gradient(circle, var(--color-rec) 4.5px, transparent 5px);
+  width: 25px;
+  height: 25px;
   align-items: center;
-  filter: drop-shadow(0 0 4px var(--color-rec));
-  border-top: 1px solid var(--color-ramka);
-  border-right: 1px solid var(--color-ramka);
+  border-top: 1px solid var(--color-decorated-element-header-footer);
+  border-right: 1px solid var(--color-decorated-element-header-footer);
+  background: radial-gradient(circle, var(--color-decorated-element-header) 1px, transparent 8px);
+  filter: drop-shadow(0 0 1px var(--color-decorated-element-header));
 }
 
-.pystota {
-  margin: 0;
-}
 
-.background-text {
+
+.header-block-text {
   display: grid;
   grid-template-rows: 1fr auto;
   justify-self: end;
@@ -111,10 +103,10 @@
   width: 100%;
 }
 
-.header-title {
+.header-text {
   align-self: flex-start;
   justify-self: end;
-  block-size: 117px;
+
   inline-size: max(355px, 47vw);
   line-height: 23.4px;
   letter-spacing: 0;
@@ -122,31 +114,31 @@
   margin-block-end: 0;
 }
 
-.background-text::after {
+.header-block-text::after {
   content: '';
   display: block;
   width: 25px;
   height: 25px;
   justify-self: flex-start;
-  border-bottom: 1px solid var(--color-ramka);
-  border-left: 1px solid var(--color-ramka);
+  border-bottom: 1px solid var(--color-decorated-element-header-footer);
+  border-left: 1px solid var(--color-decorated-element-header-footer);
   grid-row: 2;
 }
 
-.title-decor {
-  font-family: 'IBM Plex mono';
-  background-color: var(--background-text);
+.all-title {
+  font-family: 'IBM Plex mono', Arial, sans-serif;
+  background-color: var(--color-all-title-background);
   font-size: 18px;
-  color: var(--text-color-header);
+  color: var(--color-text-all-title);
   font-weight: bold;
   margin-block-end: 0;
   margin-block-start: 0;
 }
 
-.zagolovok {
+.start-end-title {
   margin-block: 0;
-  text-shadow: 4px 4px 0 var(--accent-color);
-  color: var(--text-header);
+  text-shadow: 4px 4px 0 var(--color-shadow);
+  color: var(--color-text-start-end-title);
   line-height: 83%;
   font-weight: bold;
 }
@@ -154,11 +146,11 @@
 .section-text {
   display: grid;
   height: fit-content;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', Arial, sans-serif;
 }
 
-.title-main {
-  font-family: 'IBM Plex Mono';
+.main-title-block {
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -167,11 +159,11 @@
   margin: 0;
 }
 
-.osnova {
+.main-block-text-father {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  background-color: var(--background-fon);
-  font-family: 'IBM Plex mono';
+  background-color: var(--background-fon-body);
+  font-family: 'IBM Plex mono', Arial, sans-serif;
 }
 
 .text-desctop {
@@ -191,111 +183,98 @@
   margin: 0;
 }
 
-h4.title-decor {
+.title-main-h4 {
   font-weight: 400;
 }
 
 .text-main {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
   letter-spacing: 0;
-  color: var(--text-main);
+  color: var(--color-text-main);
 }
 
-.podval {
-  background-color: var(--background-fon);
+.footer {
+  background-color: var(--background-fon-body);
   block-size: 100vh;
+  min-block-size: 667px;
+  min-inline-size: 375px;
 }
 
-.footer-text {
+.footer-block-title {
   display: grid;
   height: 100%;
   width: 100%;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', Arial, sans-serif;
 }
 
-.footer-text::after {
+.footer-block-title::after {
   content: '';
   display: block;
   width: 25px;
   height: 25px;
-  justify-content: end;
-  border-bottom: 1px solid var(--color-ramka);
-  border-left: 1px solid var(--color-ramka);
   align-self: end;
   justify-self: start;
+  border-bottom: 1px solid var(--color-decorated-element-header-footer);
+  border-left: 1px solid var(--color-decorated-element-header-footer);
 }
 
-.footer-text::before {
+.footer-block-title::before {
   content: '';
   display: block;
   width: 25px;
   height: 25px;
-  justify-content: end;
-  border-top: 1px solid var(--color-ramka);
-  border-right: 1px solid var(--color-ramka);
+  border-top: 1px solid var(--color-decorated-element-header-footer);
+  border-right: 1px solid var(--color-decorated-element-header-footer);
   align-self: start;
   justify-self: end;
 }
 
-.footer {
+.footer-block-title > .start-end-title {
   align-self: center;
   justify-self: center;
-  margin: 0;
-  margin-block: 0;
 }
 
 .link {
   text-decoration: none;
-  text-shadow: 1px 1px 0 var(--accent-color);
-  color: var(--text-main);
+  text-shadow: 2px 1px 0 var(--color-shadow);
+  color: var(--color-text-main);
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--text-main);
+  border-bottom: 1px solid var(--color-text-main);
   outline: none;
 }
 
-.link:focus {
-  border-bottom: 1px solid var(--text-main);
+.link:focus-visible {
+  border-bottom: 1px solid var(--color-text-main);
   outline: none;
 }
 
-.text {
+.main-text-paragraph {
   gap: 0.7em;
 }
 
-.block {
+.block-text-main {
   display: grid;
 }
 
 @media (width<768px) {
-  .decor {
+  .decorated-element-header-dark {
     padding-top: 10px;
   }
 
-  .zagolovok {
+  .start-end-title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
-  /*.header > .zagolovok{
-    padding-block-start: 60px;
-  }
-  .background-text{
-    padding-block-start: 59px;
-  }
-
-  .ramka {
-    margin-block-start: 29px;
-  }*/
-
-  .header-title {
+  .header-text {
     top: 10px;
   }
 
-  .osnova {
+  .main-block-text-father {
     gap: 25px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
@@ -306,19 +285,16 @@ h4.title-decor {
     padding-block-start: 10px;
   }
 
-  .title-main:nth-child(1) {
+  .main-title-block {
     padding: 1.5em 0 1em;
   }
 
-  .title-main:nth-child(2(n+1) + 3) {
-    padding: 3em 0 0;
-  }
 
   .section-text {
     gap: 20px;
   }
 
-  .text-planshet-par > .title-decor:first-child {
+  .text-planshet-par > .all-title:first-child {
     margin-bottom: 1em;
   }
 
@@ -328,8 +304,8 @@ h4.title-decor {
   }
 
   .gallery {
-    gap: 7px;
-    padding-block-end: 53px;
+    gap: 10px;
+    padding-block-end: 42px;
   }
 
   .gallery__image {
@@ -345,7 +321,7 @@ h4.title-decor {
     gap: 26px;
   }
 
-  .podval {
+  .footer {
     padding-inline: 10px;
     padding-block: 10px;
   }
@@ -354,34 +330,33 @@ h4.title-decor {
 @media (width>= 768px) {
 
   .header__theme-menu {
-    padding-top: 10.3vh;
+    padding-block-start: 10.3vh;
   }
 
-  .header-title {
-    block-size: min(15vh, 117px);
+  .header-text {
     inline-size: max(364px, 46vw);
   }
 
-  .zagolovok {
+  .start-end-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
-  .header > .zagolovok {
+  .header > .start-end-title {
     margin-inline-start: -20px;
   }
 
-  .osnova {
-    padding-top: 40px;
+  .main-block-text-father {
+    padding-block-start: 40px;
     gap: 5em;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
   }
 
-  .block:first-child {
+  .block-text-main:first-child {
     padding-block-start: 20px;
   }
 
-  .block:nth-child(2n + 1) {
+  .block-text-main:nth-child(2n + 1) {
     grid-template-columns: 30.7vw 1fr;
     gap: 1.2em;
   }
@@ -394,24 +369,25 @@ h4.title-decor {
     gap: 20px;
   }
 
-  .block:nth-child(2n) {
+  .block-even {
     gap: 20px;
   }
 
-  .block:nth-child(2n) > .title-main:first-child {
+  .block-even:nth-child(2n) > .main-title-block:first-child {
     width: 30vw;
-    height: 7vh;
     display: block;
   }
 
+
   .gallery {
+    padding-block-start: 20px;
     display: grid;
-    grid-template-columns: repeat(3, clamp(230px, 30vw, 315px));
-    grid-template-rows: repeat(2, clamp(230px, 30vw, 315px)), auto;
+    grid-template-columns: none;
+    grid-template-rows: none;
     gap: 20px;
     height: 100%;
     width: 100%;
-    padding-block-end: 45px;
+    padding-block-end: 49px;
   }
 
   .gallery__item {
@@ -456,107 +432,76 @@ h4.title-decor {
   }
 
   .section-image {
-    gap: 20px;
+    display: block;
+    gap:0;
   }
 
   .header {
     gap: 27px;
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
+    padding-inline: 20px;
     padding-block-end: 20px;
   }
 
-  .decor {
-    padding-top: 20px;
-  }
-
-  .podval {
-    padding-inline: 20px;
-    padding-block: 20px;
+  .decorated-element-header-dark {
+    padding-block-start: 20px;
   }
 
   .footer {
-    justify-self: center;
-    align-self: center;
+    padding-inline: 20px;
+    padding-block: 20px;
   }
 }
 
 @media (min-width: 1024px) {
-  .header {
-    padding-inline: 20px;
-    padding-block-start: 12px;
-    gap: 75px;
-  }
 
-  .pystota {
-    padding: 0 55px 0 0;
-  }
-
-  .verh-header {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .header__theme-menu-list {
+   .header__theme-menu-list {
     display: flex;
     gap: 10px;
   }
 
-  .decor {
+  .header-text {
+    inline-size: max(491px, 45vw);
+  }
+
+  .header {
+    padding-block-start: 12px;
+    gap: 75px;
+  }
+
+  .header_empty_element_1024 {
+    padding: 0 60px 0 0;
+  }
+
+  .header-start-block{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  } 
+
+  .block-even > .section-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .decorated-element-header-dark {
     align-self: flex-start;
     padding-block-start: 0.5rem;
   }
 
   .header__theme-menu {
-    padding-top: 0%;
+    padding-block-start: 0;
     align-self: flex-start;
   }
 
-  .zagolovok {
-    align-self: center;
-    padding-block-start: 25px;
-  }
-
-  .header-title {
-    block-size: min(15vh, 71px);
-    inline-size: max(491px, 45vw);
-  }
-
-  .block:nth-child(2n) {
+  .block-even {
     gap: 15px;
   }
 
-  .block:nth-child(2n) > .section-text {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .gallery {
-    padding-block-start: 20px;
-    grid-template-columns: none;
-    grid-template-rows: none;
-    gap: 20px;
-    height: auto;
-    padding-block-end: 48px;
-  }
-
-  .title-decor {
-    align-self: self-start;
-  }
-
-  .section-image {
-    display: block;
-    gap: 0;
-  }
-
-  .podval {
-    padding-inline: 20px;
-    padding-block: 20px;
-  }
-
-  .footer {
-    padding-top: 0;
-    margin-top: 0%;
+  .header > .start-end-title {
+    padding-block-start: 25px;
     align-self: center;
+  }
+
+  .block-even > .section-text {
+    padding-block-start: 8px;
   }
 }
