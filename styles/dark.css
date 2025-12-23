@@ -16,4 +16,14 @@
   --color-shadow: #ff0070;
   --color-text-start-end-title: #db00ff;
   --color-text-main: #f1b2ce;
+  --header-theme-dark-circle: radial-gradient(
+    circle at center,
+    var(--color-decorated-element-header) 0,
+    var(--color-decorated-element-header) 4px,
+    rgb(255 0 112 / 0.8) 5px,
+    rgb(255 0 112 / 0.6) 6px,
+    rgb(255 0 112 / 0.4) 7px,
+    rgb(255 0 112 / 0.2) 8px,
+    transparent 9px
+  );
 }

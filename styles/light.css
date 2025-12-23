@@ -16,10 +16,10 @@
   --color-shadow: #ff8dcb;
   --color-text-start-end-title: #ffc2e6;
   --color-text-main: #353430;
+  --header-theme-dark-circle: none;
 }
 
 @media (prefers-color-scheme: light) {
-
   :root {
     --background-header: url(../images/cover-image-light.png);
     --background-fon-body: #fff1f7;
@@ -32,5 +32,6 @@
     --color-shadow: #ff8dcb;
     --color-text-start-end-title: #ffc2e6;
     --color-text-main: #353430;
+    --header-theme-dark-circle: none;
   }
 }
