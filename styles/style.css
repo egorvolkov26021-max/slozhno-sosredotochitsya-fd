@@ -1,12 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-attachment: fixed;
-  background-color: var(--background-fon-body);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background-attachment: fixed; 
+  background-image: var(--background-header); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: var(--background-fon-body); 
+  min-height: 100vh
 }
 
 .decorated-zone::before,
@@ -150,6 +151,7 @@
 }
 
 .main-block-text-father {
+   background-color: var(--background-fon-body);
   display: grid;
   gap: 25px;
   grid-template-columns: minmax(0, 1fr);
@@ -188,6 +190,7 @@
 }
 
 .footer {
+  background-color: var(--background-fon-body);
   display: grid;
   block-size: 100vh;
   min-block-size: 667px;
