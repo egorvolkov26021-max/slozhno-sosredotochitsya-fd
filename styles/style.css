@@ -151,7 +151,7 @@
 }
 
 .main-block-text-father {
-   background-color: var(--background-fon-body);
+  background-color: var(--background-fon-body);
   display: grid;
   gap: 25px;
   grid-template-columns: minmax(0, 1fr);
