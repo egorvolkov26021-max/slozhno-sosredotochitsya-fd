@@ -1,13 +1,13 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-attachment: fixed; 
-  background-image: var(--background-header); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-color: var(--background-fon-body); 
-  min-height: 100vh
+  background-attachment: fixed;
+  background-image: var(--background-header);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-fon-body);
+  min-height: 100vh;
 }
 
 .decorated-zone::before,
@@ -246,6 +246,7 @@
 }
 
 @media (width<768px) {
+
   .header {
     padding-block: 10px;
     padding-inline: 10px;
@@ -293,6 +294,7 @@
 }
 
 @media (width>= 768px) {
+
   .header__theme-menu {
     padding-block-start: 25px;
   }
@@ -391,6 +393,7 @@
 }
 
 @media (min-width: 1024px) {
+
   .header__theme-menu-list {
     display: flex;
     gap: 10px;

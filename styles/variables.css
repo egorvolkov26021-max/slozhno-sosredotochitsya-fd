@@ -23,18 +23,21 @@
 }
 
 @media (width<768px) {
+
   :root {
     --header-betwen-distance: 32px;
   }
 }
 
 @media (width>= 768px) {
+
   :root {
     --header-betwen-distance: 118px;
   }
 }
 
 @media (min-width: 1024px) {
+
   :root {
     --header-betwen-distance: 0;
   }

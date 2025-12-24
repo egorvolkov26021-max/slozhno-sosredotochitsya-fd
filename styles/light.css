@@ -20,6 +20,7 @@
 }
 
 @media (prefers-color-scheme: light) {
+
   :root {
     --background-header: url(../images/cover-image-light.png);
     --background-fon-body: #fff1f7;
